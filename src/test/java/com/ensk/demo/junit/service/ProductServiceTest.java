@@ -68,7 +68,7 @@ public class ProductServiceTest {
         Assert.assertTrue(productService.getPrice(name) > 0);
     }
 
-    @Test
+    @Test(timeout = 500)
     public void testGetStock() throws BusinessException {
         Assume.assumeTrue(type == Type.GS);
         Assert.assertTrue(productService.getStock(name) >= 0);
